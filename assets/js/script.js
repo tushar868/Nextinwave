@@ -15,6 +15,20 @@ const addEventOnElem = function (elem, type, callback) {
 }
 
 
+document.getElementById('load-more-btn').addEventListener('click', function() {
+  // Get all hidden service cards
+  const hiddenCards = document.querySelectorAll('.service-card.hidden');
+  
+  // Show all the hidden service cards
+  hiddenCards.forEach(card => {
+    card.classList.remove('hidden');
+  });
+  
+  // Hide the "Load More" button after cards are displayed
+  this.style.display = 'none';
+});
+
+
 
 /**
  * toggle navbar
@@ -110,6 +124,5 @@ function handleRazorpayPayment(e) {
   var rzp1 = new Razorpay(options);
   rzp1.open();
 }
-
 
 document.querySelector('.contact-form').addEventListener('submit', handleRazorpayPayment);

@@ -63,7 +63,7 @@
    * spacing
    */
 
-  --section-padding: 60px;
+  --section-padding: 20px;
 
   /**
    * shadow
@@ -192,6 +192,15 @@ body {
 
 .btn-primary:is(:hover, :focus) { background-position: bottom right; }
 
+#load-more-btn {
+  background-image: var(--gradient);
+  background-size: 1000%;
+  display: inline-block; /* Ensure the button takes its content's width */
+  margin: 0 auto; /* Center horizontally */
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
 .btn-secondary {
   background-color: var(--white-1);
   color: var(--eerie-black);
@@ -233,8 +242,12 @@ body {
 .grid-list-1{
   display: grid;
   gap: 30px;
+  
 
+}
 
+.hidden {
+  display: none;
 }
 
 .img-holder {
@@ -496,6 +509,7 @@ body {
 
 .what-card .card-text {
   color: var();
+  text-align: justify;
 }
 
 
@@ -557,7 +571,7 @@ body {
   #ABOUT
 \*-----------------------------------*/
 
-.about { background-color: var(--white-2); }
+.about {  padding: 30px; }
 
 .about-banner {
   position: relative;

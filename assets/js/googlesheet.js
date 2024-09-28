@@ -12,7 +12,7 @@ function doPost (e) {
   const lock = LockService.getScriptLock()
   lock.tryLock(10000)
 
-  
+
 
   try {
     const doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
@@ -47,4 +47,8 @@ function doPost (e) {
   finally {
     lock.releaseLock()
   }
+
 }
+
+
+

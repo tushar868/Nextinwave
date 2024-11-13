@@ -1241,7 +1241,7 @@ textarea.input-field {
     all: unset;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
   }
 
   .navbar-link { position: relative; }
